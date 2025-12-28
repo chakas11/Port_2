@@ -3910,6 +3910,58 @@ input, select, textarea {
 
 	.intro-content {
 		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.intro-image {
+		max-width: 50%;
+		text-align: center;
+		margin-bottom: 2em;
+	}
+
+	.intro-text {
+		text-align: center;
+		padding: 0 2em;
+	}
+
+		@media screen and (max-width: 736px) {
+
+			.intro-content {
+				flex-direction: column;
+				text-align: center;
+			}
+
+			.intro-image {
+				max-width: 100%;
+				margin-bottom: 2em;
+			}
+
+				.intro-image img {
+					max-height: 40vh;
+					width: auto;
+					object-fit: contain;
+				}
+
+			.intro-text {
+				padding: 2.5em 1.5em 0.1em 5.5em;
+			}
+
+			#intro .intro-text ul.actions {
+				flex-direction: row;
+			}
+
+			#intro .intro-text ul.actions li {
+				flex: 1;
+			}
+
+		}
+
+/* Intro Content */
+
+	.intro-content {
+		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		flex-wrap: wrap;
@@ -3946,7 +3998,15 @@ input, select, textarea {
 				}
 
 			.intro-text {
-				padding-left: 0;
+				padding: 2.5em 1.5em 0.1em 5.5em;
+			}
+
+			#intro .intro-text ul.actions {
+				flex-direction: row;
+			}
+
+			#intro .intro-text ul.actions li {
+				flex: 1;
 			}
 
 		}
